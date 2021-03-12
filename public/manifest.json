@@ -1,0 +1,16 @@
+{
+  "short_name": "Corona.Finance",
+  "name": "Corona.Finance - A money cluster on Binance Smart Chain (BSC)",
+  "description": "DeFi is like a hurricane here at CoronaSwap. Tokens, Farming, Pool Rewards",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "type": "image/png",
+      "sizes": "256x256"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
