@@ -48,6 +48,7 @@ const fetchFarms = async () => {
         },
       ]
 
+
       const [
         tokenBalanceLP,
         quoteTokenBlanceLP,
@@ -56,7 +57,6 @@ const fetchFarms = async () => {
         tokenDecimals,
         quoteTokenDecimals,
       ] = await multicall(erc20, calls)
-
       let tokenAmount
       let lpTotalInQuoteToken
       let tokenPriceVsQuote
@@ -91,7 +91,7 @@ const fetchFarms = async () => {
         }
       }
 
-      const [info, totalAllocPoint, virusPerBlock] = await multicall(masterchefABI, [
+      const [info, totalAllocPoint, carrotPerBlock] = await multicall(masterchefABI, [
         {
           address: getMasterChefAddress(),
           name: 'poolInfo',
@@ -103,7 +103,7 @@ const fetchFarms = async () => {
         },
         {
           address: getMasterChefAddress(),
-          name: 'virusPerBlock',
+          name: 'carrotPerBlock',
         },
       ])
 
@@ -119,7 +119,7 @@ const fetchFarms = async () => {
         poolWeight: poolWeight.toNumber(),
         multiplier: `${allocPoint.div(100).toString()}X`,
         depositFeeBP: info.depositFeeBP,
-        virusPerBlock: new BigNumber(virusPerBlock).toNumber(),
+        carrotPerBlock: new BigNumber(carrotPerBlock).toNumber(),
       }
     }),
   )

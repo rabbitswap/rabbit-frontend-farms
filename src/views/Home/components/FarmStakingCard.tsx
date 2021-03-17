@@ -45,7 +45,7 @@ const FarmedStakingCard = () => {
   const TranslateString = useI18n()
   const farmsWithBalance = useFarmsWithBalance()
   const cakeBalance = getBalanceNumber(useTokenBalance(getCakeAddress()))
-  const virusPrice = usePriceCakeBusd().toNumber()
+  const carrotPrice = usePriceCakeBusd().toNumber()
   const allEarnings = useAllEarnings()
   const earningsSum = allEarnings.reduce((accum, earning) => {
     return accum + new BigNumber(earning).div(new BigNumber(10).pow(18)).toNumber()
@@ -76,12 +76,12 @@ const FarmedStakingCard = () => {
         <Block>
           <Label>{TranslateString(544, 'CARROT to Harvest')}</Label>
           <CakeHarvestBalance earningsSum={earningsSum} />
-          <Label>~${(virusPrice * earningsSum).toFixed(2)}</Label>
+          <Label>~${(carrotPrice * earningsSum).toFixed(2)}</Label>
         </Block>
         <Block>
           <Label>{TranslateString(546, 'CARROT in Wallet')}</Label>
           <CakeWalletBalance cakeBalance={cakeBalance} />
-          <Label>~${(virusPrice * cakeBalance).toFixed(2)}</Label>
+          <Label>~${(carrotPrice * cakeBalance).toFixed(2)}</Label>
         </Block>
         <Actions>
           {account ? (

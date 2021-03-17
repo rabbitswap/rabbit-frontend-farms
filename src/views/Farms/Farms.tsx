@@ -58,9 +58,9 @@ const Farms: React.FC<FarmsProps> = (farmsProps) => {
         // if (!farm.tokenAmount || !farm.lpTotalInQuoteToken || !farm.lpTotalInQuoteToken) {
         //   return farm
         // }
-        let cakeRewardPerBlock = new BigNumber(farm.virusPerBlock || 1).times(new BigNumber(farm.poolWeight))
+        let cakeRewardPerBlock = new BigNumber(farm.carrotPerBlock || 1).times(new BigNumber(farm.poolWeight))
 
-        if (farm.virusPerBlock >= new BigNumber(10).pow(18)) {
+        if (farm.carrotPerBlock >= new BigNumber(10).pow(18)) {
           cakeRewardPerBlock = cakeRewardPerBlock.div(new BigNumber(10).pow(18))
         }
 

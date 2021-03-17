@@ -12,12 +12,12 @@ const config: MenuEntry[] = [
     items: [
       {
         label: 'Exchange',
-        href: 'https://exchange.pancakeswap.finance/#/swap?outputCurrency=0x0c34C1Ab7b0D7A6e47500e579102E8840bf334B4',
+        href: 'https://exchange.pancakeswap.finance/#/swap?outputCurrency=0xbc1285cb5ea607a4f305b6ec20e02734d8b0bc3c48cf6e366d636f6e3e5ae659',
       },
       {
         label: 'Liquidity',
         href:
-          'https://exchange.pancakeswap.finance/#/add/0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c/0x0c34C1Ab7b0D7A6e47500e579102E8840bf334B4',
+          'https://exchange.pancakeswap.finance/#/add/0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c/0xbc1285cb5ea607a4f305b6ec20e02734d8b0bc3c48cf6e366d636f6e3e5ae659',
       },
     ],
   },

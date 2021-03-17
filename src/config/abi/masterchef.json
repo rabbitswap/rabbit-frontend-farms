@@ -2,8 +2,8 @@
   {
     "inputs": [
       {
-        "internalType": "contract VirusToken",
-        "name": "_virus",
+        "internalType": "contract CarrotToken",
+        "name": "_carrot",
         "type": "address"
       },
       {
@@ -18,7 +18,7 @@
       },
       {
         "internalType": "uint256",
-        "name": "_virusPerBlock",
+        "name": "_carrotPerBlock",
         "type": "uint256"
       },
       {
@@ -110,6 +110,63 @@
       },
       {
         "indexed": true,
+        "internalType": "address",
+        "name": "newAddress",
+        "type": "address"
+      }
+    ],
+    "name": "SetDevAddress",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "user",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "newAddress",
+        "type": "address"
+      }
+    ],
+    "name": "SetFeeAddress",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "user",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "carrotPerBlock",
+        "type": "uint256"
+      }
+    ],
+    "name": "UpdateEmissionRate",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "user",
+        "type": "address"
+      },
+      {
+        "indexed": true,
         "internalType": "uint256",
         "name": "pid",
         "type": "uint256"
@@ -140,40 +197,40 @@
   },
   {
     "inputs": [],
+    "name": "carrot",
+    "outputs": [
+      {
+        "internalType": "contract CarrotToken",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "constant": true
+  },
+  {
+    "inputs": [],
+    "name": "carrotPerBlock",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "constant": true
+  },
+  {
+    "inputs": [],
     "name": "devaddr",
     "outputs": [
       {
         "internalType": "address",
         "name": "",
         "type": "address"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function",
-    "constant": true
-  },
-  {
-    "inputs": [],
-    "name": "virus",
-    "outputs": [
-      {
-        "internalType": "contract VirusToken",
-        "name": "",
-        "type": "address"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function",
-    "constant": true
-  },
-  {
-    "inputs": [],
-    "name": "virusPerBlock",
-    "outputs": [
-      {
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
       }
     ],
     "stateMutability": "view",
@@ -211,6 +268,26 @@
   {
     "inputs": [
       {
+        "internalType": "contract IBEP20",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "name": "poolExistence",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "constant": true
+  },
+  {
+    "inputs": [
+      {
         "internalType": "uint256",
         "name": "",
         "type": "uint256"
@@ -235,7 +312,7 @@
       },
       {
         "internalType": "uint256",
-        "name": "accVirusPerShare",
+        "name": "accCarrotPerShare",
         "type": "uint256"
       },
       {
@@ -434,7 +511,7 @@
         "type": "address"
       }
     ],
-    "name": "pendingVirus",
+    "name": "pendingCarrot",
     "outputs": [
       {
         "internalType": "uint256",
@@ -545,7 +622,7 @@
     "inputs": [
       {
         "internalType": "uint256",
-        "name": "_virusPerBlock",
+        "name": "_carrotPerBlock",
         "type": "uint256"
       }
     ],
