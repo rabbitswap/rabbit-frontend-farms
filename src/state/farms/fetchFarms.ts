@@ -48,7 +48,6 @@ const fetchFarms = async () => {
         },
       ]
 
-
       const [
         tokenBalanceLP,
         quoteTokenBlanceLP,
